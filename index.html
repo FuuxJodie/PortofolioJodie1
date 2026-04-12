@@ -94,64 +94,76 @@
         </div>
     </section>
 
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="title-center">Pengalaman <span class="highlight">Organisasi</span></h2>
-            <div class="timeline">
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>TEAM JOURNALISTIC PHOTOGRAPHY</h3>
-                        <p>Ketua Editor | 2023-2025</p>
-                        <p> Memimpin divisi editing dalam mengelola strategi konten media sosial organisasi secara menyeluruh.</p>
-                        <span class="circle"></span>
-                    </div>
+   <section id="experience" class="experience">
+    <div class="container">
+        <h2 class="title-center">Pengalaman <span class="highlight">Organisasi</span></h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>TEAM JOURNALISTIC PHOTOGRAPHY</h3>
+                    <p>Ketua Editor | 2023-2025</p>
+                    <p>Memimpin divisi editing dalam mengelola strategi konten media sosial organisasi secara menyeluruh.</p>
+                    <span class="circle"></span>
                 </div>
-
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <h3>Information Communication Technology</h3>
-                         <p>Anggota | 2023-2025</p>
-                        <p>Mendukung operasional organisasi dalam penyelenggaraan kegiatan teknis serta kompetisi teknologi seperti Line Follower dan E-sport.</p>
-                        <span class="circle"></span>
-                    </div>
-                </div>
-
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>Universal Competition of MANDUPA</h3>
-                        <p>Koordinator Lomba | 2023</p>
-                        <p>Mengelola alur teknis perlombaan mulai dari koordinasi peserta, manajemen penjurian, hingga sistem apresiasi agar berjalan sesuai rencana.</p>
-                        <span class="circle"></span>
-                    </div>
-                </div>
-
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <h3>Fasilkom Universitas Sriwijaya</h3>
-                        <p>Panitia Sponsor & SosMed | 2024 </p>
-                        <p>Menginisiasi kampanye digital dan kolaborasi tim kreatif untuk meningkatkan partisipasi siswa SMA/MA dalam rangkaian perlombaan.</p>
-                        <span class="circle"></span>
-                    </div>
-                </div>
-
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>Buku-Buku Linda</h3>
-                        <p>Project Leader | 2025-Sekarang</p>
-                        <p>Memimpin koordinasi tim lintas divisi dalam perencanaan hingga eksekusi proyek literasi yang berdampak bagi target terutama di Sumatera Selatan.</p>
-                        <span class="circle"></span>
-                    </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>NovoClub by Paragon Group</h3>
-                        <p>Member | 2026-Sekarang</p>
-                        <p>Berkontribusi dalam berbagai inisiatif komunitas dan pelatihan intensif mengenai strategi komunikasi serta manajemen proyek. .</p>
-                        <span class="circle"></span>
-                    </div>
             </div>
-        </div>
-    </section>
+
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>Information Communication Technology</h3>
+                    <p>Anggota | 2023-2025</p>
+                    <p>Mendukung operasional organisasi dalam penyelenggaraan kegiatan teknis serta kompetisi teknologi seperti Line Follower dan E-sport.</p>
+                    <span class="circle"></span>
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>Universal Competition of MANDUPA</h3>
+                    <p>Koordinator Lomba | 2023</p>
+                    <p>Mengelola alur teknis perlombaan mulai dari koordinasi peserta, manajemen penjurian, hingga sistem apresiasi agar berjalan sesuai rencana.</p>
+                    <span class="circle"></span>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>Fasilkom Universitas Sriwijaya</h3>
+                    <p>Panitia Sponsor & SosMed | 2024</p>
+                    <p>Menginisiasi kampanye digital dan kolaborasi tim kreatif untuk meningkatkan partisipasi siswa SMA/MA dalam rangkaian perlombaan.</p>
+                    <span class="circle"></span>
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>Buku-Buku Linda</h3>
+                    <p>Project Leader | 2025-Sekarang</p>
+                    <p>Memimpin koordinasi tim lintas divisi dalam perencanaan hingga eksekusi proyek literasi yang berdampak bagi target terutama di Sumatera Selatan.</p>
+                    <span class="circle"></span>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>NovoClub by Paragon Group</h3>
+                    <p>Member | 2026-Sekarang</p>
+                    <p>Berkontribusi dalam berbagai inisiatif komunitas dan pelatihan intensif mengenai strategi komunikasi serta manajemen proyek.</p>
+                    <span class="circle"></span>
+                </div>
+            </div> </div> </div> </section> ```
+
+### Kenapa ini penting?
+Pada kode lama kamu, bagian `NovoClub` berada di dalam `timeline-item` milik `Buku-Buku Linda` karena kurangnya tag penutup. Ini menyebabkan browser bingung menghitung posisi CSS `left` dan `right`-nya, sehingga di GitHub (yang biasanya lebih ketat soal *parsing*) konten tersebut jadi tidak muncul atau tersembunyi.
+
+---
+
+**Tips setelah update kodenya:**
+1. **Save** di VS Code.
+2. **Push/Upload** ke GitHub.
+3. Tunggu 1 menit (cek tab **Actions** di GitHub sampai centang hijau).
+4. Buka website kamu di browser lewat **Mode Incognito** (CTRL + SHIFT + N) untuk memastikan tidak terhalang *cache* lama.
+
+Coba update dulu, kabari ya kalau masih bandel!
 
     <section id="portfolio" class="portfolio">
         <div class="container">
