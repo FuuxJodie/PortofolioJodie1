@@ -1,13 +1,11 @@
-/* =========================================
-   1. VARIABEL & RESET
-   ========================================= */
+
 :root {
-    --bg-deep: #060b1a;           /* Navy Gelap */
-    --bg-card: rgba(15, 25, 50, 0.7); /* Transparan Glassmorphism */
-    --cyan: #00f2fe;              /* Biru Laut Terang */
-    --teal: #08d9d6;              /* Hijau Kebiruan */
-    --text-primary: #e6f1ff;      /* Putih Terang */
-    --text-dim: #8892b0;          /* Abu-abu Kebiruan */
+    --bg-deep: #060b1a;           
+    --bg-card: rgba(15, 25, 50, 0.7); 
+    --cyan: #00f2fe;             
+    --teal: #08d9d6;            
+    --text-primary: #e6f1ff;      
+    --text-dim: #8892b0;          
     --border: rgba(0, 242, 254, 0.2);
 }
 
@@ -32,9 +30,6 @@ body {
     padding: 0 20px;
 }
 
-/* =========================================
-   2. NAVIGASI
-   ========================================= */
 nav {
     display: flex;
     justify-content: space-between;
@@ -60,9 +55,7 @@ nav ul li a {
 }
 nav ul li a:hover { color: var(--cyan); }
 
-/* =========================================
-   3. HERO SECTION
-   ========================================= */
+
 .hero { min-height: 100vh; display: flex; align-items: center; }
 
 .hero-wrapper {
@@ -132,9 +125,6 @@ nav ul li a:hover { color: var(--cyan); }
     z-index: -1;
 }
 
-/* =========================================
-   4. ABOUT SECTION
-   ========================================= */
 .about { padding: 100px 0; }
 .quote-box {
     background: var(--bg-card);
@@ -155,9 +145,6 @@ nav ul li a:hover { color: var(--cyan); }
 .stat-card { background: var(--bg-card); padding: 25px; border-radius: 18px; text-align: center; border: 1px solid var(--border); }
 .stat-card h3 { color: var(--cyan); font-size: 2.2rem; }
 
-/* =========================================
-   5. JEJAK ORGANISASI (TIMELINE)
-   ========================================= */
 .experience { padding: 100px 0; background: rgba(255, 255, 255, 0.02); }
 .timeline {
     position: relative;
@@ -201,9 +188,7 @@ nav ul li a:hover { color: var(--cyan); }
 .left .circle { right: -7.5px; }
 .right .circle { left: -7.5px; }
 
-/* =========================================
-   6. PORTFOLIO SHOWCASE (UPDATED)
-   ========================================= */
+
 .portfolio { padding: 80px 0; }
 .title-center { text-align: center; font-size: 2.8rem; margin-bottom: 50px; }
 
@@ -226,7 +211,7 @@ nav ul li a:hover { color: var(--cyan); }
     animation: fadeIn 0.5s ease; 
 }
 
-/* Grid & Card Styling */
+
 .grid { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
@@ -248,26 +233,26 @@ nav ul li a:hover { color: var(--cyan); }
     box-shadow: 0 10px 30px rgba(0, 242, 254, 0.1);
 }
 
-/* Container Foto agar Ukuran Seragam */
+
 .card-img-holder { 
     width: 100%;
-    height: 220px; /* Ukuran tinggi kotak foto */
+    height: 220px; 
     overflow: hidden;
     background: #121c35;
     position: relative;
 }
 
-/* Styling Foto agar Tidak Gepeng */
+
 .card-img-holder img { 
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Foto akan mengisi kotak tanpa distorsi */
+    object-fit: cover; 
     object-position: center;
     transition: transform 0.5s ease;
 }
 
 .card:hover .card-img-holder img {
-    transform: scale(1.1); /* Efek zoom saat hover */
+    transform: scale(1.1); 
 }
 
 .card-body { padding: 25px; }
@@ -282,14 +267,13 @@ nav ul li a:hover { color: var(--cyan); }
     line-height: 1.5;
 }
 
-/* Animasi saat pindah Tab */
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-   /*7. CONTACT SECTION
-   ========================================= */
+
 .contact { padding: 100px 0; }
 .contact-header { display: flex; align-items: center; gap: 15px; margin-bottom: 40px; }
 .contact-header .line { width: 40px; height: 4px; background: var(--cyan); border-radius: 2px; }
@@ -314,9 +298,7 @@ nav ul li a:hover { color: var(--cyan); }
 .tiktok .icon-box { color: #00f2fe; }
 .external-icon { color: var(--text-dim); font-size: 1.2rem; }
 
-/* =========================================
-   8. FLOATING POPUP (3 BULET)
-   ========================================= */
+
 .social-popup { 
     position: fixed; 
     bottom: 40px; 
@@ -339,9 +321,7 @@ nav ul li a:hover { color: var(--cyan); }
 .social-icon.tt { background: #000000; border: 1px solid #fff; }
 .social-icon:hover { transform: scale(1.1) rotate(10deg); }
 
-/* =========================================
-   9. ANIMATIONS
-   ========================================= */
+
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-30px); } }
 @keyframes blink { 50% { opacity: 0; } }
 @keyframes pulse { 0%, 100% { r: 25; opacity: 0.8; } 50% { r: 35; opacity: 0.4; } }
@@ -352,9 +332,7 @@ nav ul li a:hover { color: var(--cyan); }
 
 footer { text-align: center; padding: 60px 0; color: var(--text-dim); border-top: 1px solid var(--border); }
 
-/* =========================================
-   10. RESPONSIVE (MOBILE & TABLET OPTIMIZED)
-   ========================================= */
+
 
 @media (max-width: 992px) {
     nav { padding: 15px 5%; }
@@ -374,7 +352,7 @@ footer { text-align: center; padding: 60px 0; color: var(--text-dim); border-top
         align-items: center;
     }
     
-    .hero-right { display: none; } /* Menghilangkan animasi SVG di tablet/HP agar tidak berat */
+    .hero-right { display: none; } 
     
     .hero-description { margin: 0 auto 30px; }
     .hero-socials { justify-content: center; }
@@ -396,7 +374,7 @@ footer { text-align: center; padding: 60px 0; color: var(--text-dim); border-top
 }
 
 @media (max-width: 768px) {
-    /* Navigasi HP */
+
     nav {
         flex-direction: column;
         gap: 10px;
@@ -413,28 +391,28 @@ footer { text-align: center; padding: 60px 0; color: var(--text-dim); border-top
         font-size: 0.75rem;
     }
 
-    /* Hero HP */
+   
     .hero-title { font-size: 2.5rem; }
     .typewriter { font-size: 1.4rem; }
     .hero-btns { flex-direction: column; width: 100%; align-items: center; }
     .btn-main, .btn-sub { width: 80%; text-align: center; }
 
-    /* Timeline HP */
+  
     .timeline::after { left: 20px; }
     .timeline-item { width: 100%; padding-left: 50px; padding-right: 10px; margin-bottom: 20px; }
     .right, .left { left: 0%; text-align: left; }
     .left .circle, .right .circle { left: 13px; right: auto; }
 
-    /* Portfolio Tabs */
+
     .tabs { flex-wrap: wrap; gap: 10px; }
     .tab-btn { padding: 10px 20px; font-size: 0.8rem; }
 
-    /* Contact Mini Grid */
+ 
     .mini-grid { grid-template-columns: 1fr; }
     .contact-card { padding: 15px; }
     .card-content h3 { font-size: 1rem; }
 
-    /* Floating Icons */
+  
     .social-popup {
         bottom: 20px;
         right: 20px;
