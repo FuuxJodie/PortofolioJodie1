@@ -278,13 +278,13 @@
             let contents = document.getElementsByClassName("tab-content");
             let buttons = document.getElementsByClassName("tab-btn");
             
-            // Sembunyikan semua konten tab
+         
             for (let i = 0; i < contents.length; i++) {
                 contents[i].classList.remove("active");
                 buttons[i].classList.remove("active");
             }
             
-            // Tampilkan tab yang diklik
+           
             document.getElementById(tabName).classList.add("active");
             event.currentTarget.classList.add("active");
         }
